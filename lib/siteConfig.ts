@@ -29,6 +29,15 @@ interface GalleryImage {
   alt: string;
 }
 
+interface IceCreamImages {
+  menu: string;
+  bananaSplit: string;
+  blueIceCream: string;
+  mintChocolateChip: string;
+  softServe: string;
+  sundae: string;
+}
+
 export const siteConfig: {
   businessName: string;
   secondaryName: string;
@@ -62,7 +71,7 @@ export const siteConfig: {
     };
     gallery: GalleryImage[];
     about: string;
-    iceCream: string;
+    iceCream: IceCreamImages;
   };
   seo: {
     title: string;
@@ -79,7 +88,7 @@ export const siteConfig: {
   secondaryName: "Jurassic Swirled",
   tagline: "Dinosaur-Themed Mini Golf & Ice Cream in Wildwood, NJ",
   description:
-    "Experience prehistoric fun at Jurassic Mini Golf and cool off with delicious treats at Jurassic Swirled! Family-friendly adventure on the Wildwood boardwalk.",
+    "Experience prehistoric fun at Jurassic Mini Golf and cool off with delicious treats at Jurassic Swirled! Family-friendly adventure in Wildwood!",
 
   // ===================
   // CONTACT INFORMATION
@@ -104,7 +113,7 @@ export const siteConfig: {
   // Update with actual URLs
   // ===================
   social: {
-    facebook: "https://facebook.com/jurassicadventuregolf",
+    facebook: "https://www.facebook.com/profile.php?id=100036276467734",
     instagram: "https://instagram.com/jurassicadventuregolf",
     tiktok: "https://tiktok.com/@jurassicadventuregolf",
   },
@@ -165,7 +174,7 @@ export const siteConfig: {
     },
     {
       quote:
-        "The swirl was unreal - perfect boardwalk stop after a day at the beach. The Dino Special flavor was amazing!",
+        "Perfect stop after a day at the beach. The ice cream was amazing!",
       author: "Jamie K.",
       location: "Cherry Hill, NJ",
       image: "/images/testimonials/icon-woman-silhouette.jpg",
@@ -233,7 +242,14 @@ export const siteConfig: {
       },
     ],
     about: "/images/misc/mammoth-statue-american-flag.jpg",
-    iceCream: "/images/misc/entrance-building-bridge-walkway.jpg",
+    iceCream: {
+      menu: "/images/icecream/IceCreamMenu.png",
+      bananaSplit: "/images/icecream/BananaSplitAndLogo.jpg",
+      blueIceCream: "/images/icecream/WaterIce_Jurassic.png",
+      mintChocolateChip: "/images/icecream/MintChocolateChip.jpg",
+      softServe: "/images/icecream/SoftServeConeAndLogo.jpg",
+      sundae: "/images/icecream/Sundae.jpg",
+    },
   },
 
   // ===================
@@ -242,7 +258,7 @@ export const siteConfig: {
   seo: {
     title: "Jurassic Mini Golf & Jurassic Swirled | Wildwood NJ",
     description:
-      "Experience dinosaur-themed mini golf and delicious ice cream at Jurassic Mini Golf & Jurassic Swirled in Wildwood, NJ. Perfect family fun on the boardwalk!",
+      "Experience dinosaur-themed mini golf and delicious ice cream at Jurassic Mini Golf & Jurassic Swirled in Wildwood, NJ. Perfect family fun!",
     keywords: [
       "mini golf Wildwood NJ",
       "dinosaur mini golf",
