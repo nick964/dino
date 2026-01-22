@@ -85,19 +85,19 @@ export const siteConfig: {
   // CONTACT INFORMATION
   // Update these with real values
   // ===================
-  phone: "(609) 555-DINO",
+  phone: "+16096001934",
   email: "info@jurassicadventuregolf.com",
   address: {
-    street: "3400 Boardwalk",
+    street: "300 New Jersey Ave",
     city: "Wildwood",
     state: "NJ",
     zip: "08260",
-    full: "3400 Boardwalk, Wildwood, NJ 08260",
+    full: "300 New Jersey Ave, Wildwood, NJ 08260",
   },
 
   // Google Maps URL - update with actual location
   googleMapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Jurassic+Adventure+Golf+Wildwood+NJ",
+    "https://www.google.com/maps/place/Jurassic+Adventure+Golf/@39.0065802,-74.7985394,17z/data=!3m1!4b1!4m6!3m5!1s0x89c0a86ef1e5577b:0xb5566a8963c82919!8m2!3d39.0065802!4d-74.7959591!16s%2Fg%2F11cncyfwzx?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D",
 
   // ===================
   // SOCIAL MEDIA LINKS
