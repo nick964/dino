@@ -95,7 +95,7 @@ export const siteConfig: {
   // Update these with real values
   // ===================
   phone: "+16096001934",
-  email: "info@jurassicadventuregolf.com",
+  email: "jurassicadventuregolf@gmail.com",
   address: {
     street: "300 New Jersey Ave",
     city: "Wildwood",
