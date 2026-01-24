@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import SeasonalBanner from "@/components/SeasonalBanner";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import IceCream from "@/components/IceCream";
@@ -16,6 +17,9 @@ export default function Home() {
 
       {/* Sticky Header with Navigation */}
       <Header />
+
+      {/* Seasonal Banner */}
+      <SeasonalBanner />
 
       {/* Main Content */}
       <main id="main-content">

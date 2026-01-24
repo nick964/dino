@@ -29,6 +29,11 @@ interface GalleryImage {
   alt: string;
 }
 
+interface SeasonalBanner {
+  show: boolean;
+  message: string;
+}
+
 interface IceCreamImages {
   menu: string;
   bananaSplit: string;
@@ -80,6 +85,7 @@ export const siteConfig: {
     canonical: string;
     ogImage: string;
   };
+  seasonalBanner: SeasonalBanner;
 } = {
   // ===================
   // BUSINESS INFORMATION
@@ -123,10 +129,7 @@ export const siteConfig: {
   // Update seasonally as needed
   // ===================
   hours: [
-    { days: "Monday - Thursday", time: "12:00 PM - 10:00 PM" },
-    { days: "Friday", time: "12:00 PM - 11:00 PM" },
-    { days: "Saturday", time: "10:00 AM - 11:00 PM" },
-    { days: "Sunday", time: "10:00 AM - 10:00 PM" },
+    { days: "Every Day", time: "10:00 AM - 11:00 PM" },
   ],
   hoursNote: "Seasonal hours may vary. Weather permitting.",
 
@@ -271,6 +274,15 @@ export const siteConfig: {
     ],
     canonical: "https://www.jurassicadventuregolf.com/",
     ogImage: "/images/hero/course-overview-waterfall-dinosaurs.jpg",
+  },
+
+  // ===================
+  // SEASONAL BANNER
+  // Set show to true/false to display the banner
+  // ===================
+  seasonalBanner: {
+    show: true,
+    message: "Closed for the Season! Cya Summer 2026!",
   },
 };
 

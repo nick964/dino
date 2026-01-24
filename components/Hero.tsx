@@ -3,10 +3,12 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function Hero() {
+  const bannerPadding = siteConfig.seasonalBanner.show ? "pt-[140px]" : "pt-[72px]";
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[72px]"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${bannerPadding}`}
       aria-label="Welcome to Jurassic Mini Golf"
     >
       {/* Background Image with Overlay */}
