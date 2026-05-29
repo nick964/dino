@@ -9,13 +9,13 @@ export default function Hero() {
     <section
       id="home"
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${bannerPadding}`}
-      aria-label="Welcome to Jurassic Mini Golf"
+      aria-label={`Welcome to ${siteConfig.businessName}`}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={siteConfig.images.hero.main}
-          alt="Jurassic Mini Golf course with dinosaurs and waterfall"
+          alt="Jurassic Adventure Golf course with dinosaur statues and mammoth"
           fill
           className="object-cover"
           priority
@@ -28,25 +28,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        {/* Logo */}
-        <div className="mb-6 animate-fade-in-up">
-          <div className="relative w-48 h-32 sm:w-56 sm:h-40 mx-auto bg-white/90 rounded-2xl p-4 shadow-xl">
-            <Image
-              src={siteConfig.images.logo}
-              alt={`${siteConfig.businessName} logo`}
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Main Heading - Single H1 for SEO */}
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-lg animate-fade-in-up">
+        {/* Main Heading - Single H1 for SEO, stacked business names */}
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg animate-fade-in-up leading-tight">
           <span className="block">{siteConfig.businessName}</span>
-          <span className="block text-[#f28b5c] text-3xl sm:text-4xl md:text-5xl mt-2">
-            &amp; {siteConfig.secondaryName}
-          </span>
+          <span className="block">{siteConfig.secondaryName}</span>
+          <span className="block">{siteConfig.tertiaryName}</span>
         </h1>
 
         {/* Tagline */}

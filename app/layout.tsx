@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: siteConfig.seo.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.businessName} - Dinosaur themed mini golf in Wildwood NJ`,
+        alt: `${siteConfig.businessName} - Dinosaur themed mini golf, ice cream & arcade in North Wildwood NJ`,
       },
     ],
   },

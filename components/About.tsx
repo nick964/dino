@@ -15,29 +15,36 @@ export default function About() {
           About Us
         </h2>
         <p className="section-subtitle">
-          Step back in time for a prehistoric mini golf experience the whole family will love
+          Prehistoric family-fun, all in one!
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Content Side */}
           <div className="space-y-6">
             {/* About Text - Edit this content as needed */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none space-y-5">
               <p className="text-lg text-[#2c2c2c] leading-relaxed">
-                Welcome to <strong>Jurassic Mini Golf</strong>, Wildwood&apos;s premier
-                dinosaur-themed mini golf destination! Our 18-hole course takes you on an
-                incredible journey through the prehistoric era, featuring life-size dinosaur
-                statues, roaring waterfalls, volcanic rock formations, and lush tropical landscaping.
+                Welcome to <strong>Jurassic Adventure Golf</strong>, North Wildwood&apos;s
+                premier dinosaur-themed family entertainment destination! Located at 4th and
+                New Jersey Ave, our 18-hole mini golf course takes you on an incredible journey
+                through the prehistoric era, featuring life-size dinosaur statues, roaring
+                waterfalls, volcanic rock formations, and lush tropical landscaping.
               </p>
               <p className="text-lg text-[#2c2c2c] leading-relaxed">
-                After your round, cool down at <strong>Jurassic Swirled</strong>, our attached
-                ice cream shop serving delicious soft serve, sundaes, and specialty treats.
-                It&apos;s the perfect way to end your prehistoric adventure!
+                After your round, keep the fun going inside <strong>Jurassic Arcade</strong>,
+                where guests of all ages can enjoy exciting games and classic arcade action in
+                a one-of-a-kind Jurassic setting. Whether you&apos;re competing for high scores
+                or just looking for more family fun, the arcade is the perfect next stop.
               </p>
               <p className="text-lg text-[#2c2c2c] leading-relaxed">
-                Whether you&apos;re a mini golf pro or playing for the first time, our course
-                offers fun challenges for all ages and skill levels. Come create unforgettable
-                memories with your family and friends on the Wildwood boardwalk!
+                Need to cool down? Visit <strong>Jurassic Swirled</strong>, our ice cream shop
+                on 3rd street, serving delicious soft serve, sundaes, and specialty treats. The
+                perfect way to end your prehistoric adventure.
+              </p>
+              <p className="text-lg text-[#2c2c2c] leading-relaxed">
+                Whether you&apos;re a mini golf pro or visiting for the first time, Jurassic
+                offers fun for all ages with mini golf, arcade games, and sweet treats all in
+                one place. Come create unforgettable memories with your family and friends!
               </p>
             </div>
 
@@ -113,7 +120,8 @@ export default function About() {
                   </tr>
                   <tr className="border-b border-[#d4cfc5]">
                     <td className="py-2.5 font-semibold text-[#2c2c2c]">
-                      Veterans & First Responders
+                      Veterans, First Responders & Seniors{" "}
+                      <span className="font-normal text-[#666]">(all day)</span>
                     </td>
                     <td className="py-2.5 text-right text-[#1a5f2a] font-medium">
                       $9
@@ -121,7 +129,7 @@ export default function About() {
                   </tr>
                   <tr>
                     <td className="py-2.5 font-semibold text-[#2c2c2c]">
-                      Kids Under 5
+                      Kids 3 and Under
                     </td>
                     <td className="py-2.5 text-right text-[#1a5f2a] font-medium">
                       Free
@@ -138,7 +146,7 @@ export default function About() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={siteConfig.images.about}
-                alt="Mammoth statue at Jurassic Mini Golf with American flag"
+                alt="Mammoth statue at Jurassic Adventure Golf with American flag"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

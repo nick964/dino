@@ -46,6 +46,7 @@ interface IceCreamImages {
 export const siteConfig: {
   businessName: string;
   secondaryName: string;
+  tertiaryName: string;
   tagline: string;
   description: string;
   phone: string;
@@ -70,6 +71,11 @@ export const siteConfig: {
   testimonials: Testimonial[];
   images: {
     logo: string;
+    logos: {
+      golf: string;
+      swirled: string;
+      arcade: string;
+    };
     hero: {
       main: string;
       secondary: string;
@@ -90,11 +96,13 @@ export const siteConfig: {
   // ===================
   // BUSINESS INFORMATION
   // ===================
-  businessName: "Jurassic Mini Golf",
+  businessName: "Jurassic Adventure Golf",
   secondaryName: "Jurassic Swirled",
-  tagline: "Dinosaur-Themed Mini Golf & Ice Cream in Wildwood, NJ",
+  tertiaryName: "Jurassic Arcade",
+  tagline:
+    "Dinosaur-Themed Mini Golf, Ice Cream Shop, & Arcade in North Wildwood, NJ",
   description:
-    "Experience prehistoric fun at Jurassic Mini Golf and cool off with delicious treats at Jurassic Swirled! Family-friendly adventure in Wildwood!",
+    "Experience prehistoric fun at Jurassic Adventure Golf, cool off with treats at Jurassic Swirled, and play on at Jurassic Arcade! Family-friendly adventure in North Wildwood, NJ!",
 
   // ===================
   // CONTACT INFORMATION
@@ -103,11 +111,11 @@ export const siteConfig: {
   phone: "+16096001934",
   email: "jurassicadventuregolf@gmail.com",
   address: {
-    street: "300 New Jersey Ave",
-    city: "Wildwood",
+    street: "4th & New Jersey Ave",
+    city: "North Wildwood",
     state: "NJ",
     zip: "08260",
-    full: "300 New Jersey Ave, Wildwood, NJ 08260",
+    full: "4th & New Jersey Ave, North Wildwood, NJ 08260",
   },
 
   // Google Maps URL - update with actual location
@@ -129,7 +137,9 @@ export const siteConfig: {
   // Update seasonally as needed
   // ===================
   hours: [
-    { days: "Every Day", time: "10:00 AM - 11:00 PM" },
+    { days: "Golf", time: "10:00 AM – 11:00 PM (last tee 10:15 PM)" },
+    { days: "Ice Cream", time: "6:00 PM – 11:00 PM" },
+    { days: "Arcade", time: "10:00 AM – 10:00 PM" },
   ],
   hoursNote: "Seasonal hours may vary. Weather permitting.",
 
@@ -190,58 +200,63 @@ export const siteConfig: {
   // ===================
   images: {
     logo: "/images/logo/jurassic-adventure-golf-logo.png",
+    logos: {
+      golf: "/images/logo/jurassic-adventure-golf-logo.png",
+      swirled: "/images/logo/jurassic-swirled-logo.jpg",
+      arcade: "/images/logo/jurassic-arcade-logo.png",
+    },
     hero: {
-      main: "/images/hero/course-overview-waterfall-dinosaurs.jpg",
-      secondary: "/images/hero/course-layout-aerial-style.jpg",
+      main: "/images/hero/course-street-view-mammoth.jpg",
+      secondary: "/images/hero/course-overview-waterfall-dinosaurs.jpg",
     },
     gallery: [
       {
-        src: "/images/gallery/trex-statue-full-golf-sign-2.jpg",
-        alt: "T-Rex statue with Jurassic Golf sign",
+        src: "/images/gallery/trex-statue-dusk-rainbow.jpg",
+        alt: "Green T-Rex statue on the course at dusk with a rainbow behind it",
       },
       {
-        src: "/images/gallery/velociraptor-statue-night-wide.jpg",
-        alt: "Velociraptor statue illuminated at night",
+        src: "/images/gallery/trex-statue-visitors-daytime.png",
+        alt: "Visitors posing with the towering green T-Rex statue on a sunny day",
       },
       {
-        src: "/images/gallery/waterfall-rock-formation-dimetrodon.jpg",
-        alt: "Waterfall and rock formation with Dimetrodon",
+        src: "/images/gallery/blue-velociraptor-statue.jpg",
+        alt: "Blue velociraptor statue at the entrance of the mini golf course",
       },
       {
-        src: "/images/gallery/red-rock-tunnel-hole.jpg",
-        alt: "Red rock tunnel golf hole",
+        src: "/images/gallery/family-photo-on-course.jpg",
+        alt: "Family of five posing together on the mini golf course",
       },
       {
-        src: "/images/gallery/velociraptor-statue-volcano-daytime.jpg",
-        alt: "Velociraptor statue with volcano during the day",
+        src: "/images/gallery/mammoth-statue-flag-daytime.png",
+        alt: "Woolly mammoth statue with an American flag at the course",
       },
       {
-        src: "/images/gallery/course-holes-rock-features.jpg",
-        alt: "Course holes with rock features",
+        src: "/images/gallery/sabertooth-statue-course.png",
+        alt: "Sabertooth statue among the mini golf holes",
       },
       {
-        src: "/images/gallery/mini-golf-overview-2.jpg",
-        alt: "Mini golf course overview",
+        src: "/images/gallery/course-aerial-overhead.png",
+        alt: "Aerial overhead view of the full mini golf course layout",
       },
       {
-        src: "/images/gallery/holes-layout-overview.jpg",
-        alt: "Overview of course hole layout",
+        src: "/images/gallery/arcade-games-interior.jpg",
+        alt: "Inside Jurassic Arcade with games and prize machines",
       },
       {
-        src: "/images/gallery/course-layout-view-2.jpg",
-        alt: "Course layout wide view",
+        src: "/images/gallery/ice-cream-cookie-sandwiches.jpg",
+        alt: "Chocolate chip cookie ice cream sandwiches from Jurassic Swirled",
       },
       {
-        src: "/images/gallery/visitor-putting-mammoth-background.jpg",
-        alt: "Visitor putting with mammoth in background",
+        src: "/images/gallery/water-ice-gelati-pretzel.jpg",
+        alt: "Water ice and gelati cups with a soft pretzel at Jurassic Swirled",
       },
       {
-        src: "/images/gallery/group-photo-trex-background.jpg",
-        alt: "Group photo with T-Rex in background",
+        src: "/images/gallery/banana-split-sundae.jpg",
+        alt: "Banana split sundae at the Jurassic Swirled counter",
       },
       {
-        src: "/images/gallery/course-overview-golf-sign-waterfall.jpg",
-        alt: "Course overview with golf sign and waterfall",
+        src: "/images/gallery/sundae-whipped-cream-cherry.png",
+        alt: "Loaded sundae topped with whipped cream and a cherry",
       },
     ],
     about: "/images/misc/mammoth-statue-american-flag.jpg",
@@ -259,21 +274,22 @@ export const siteConfig: {
   // SEO & METADATA
   // ===================
   seo: {
-    title: "Jurassic Mini Golf & Jurassic Swirled | Wildwood NJ",
+    title: "Jurassic Adventure Golf, Swirled & Arcade | North Wildwood NJ",
     description:
-      "Experience dinosaur-themed mini golf and delicious ice cream at Jurassic Mini Golf & Jurassic Swirled in Wildwood, NJ. Perfect family fun!",
+      "Dinosaur-themed mini golf, ice cream, and arcade fun at Jurassic Adventure Golf, Jurassic Swirled & Jurassic Arcade in North Wildwood, NJ. Perfect family fun!",
     keywords: [
-      "mini golf Wildwood NJ",
+      "mini golf North Wildwood NJ",
       "dinosaur mini golf",
-      "Wildwood boardwalk",
-      "ice cream Wildwood",
-      "family activities Wildwood",
-      "Jurassic Mini Golf",
+      "Wildwood arcade",
+      "ice cream North Wildwood",
+      "family activities North Wildwood",
+      "Jurassic Adventure Golf",
       "Jurassic Swirled",
-      "things to do Wildwood NJ",
+      "Jurassic Arcade",
+      "things to do North Wildwood NJ",
     ],
     canonical: "https://www.jurassicadventuregolf.com/",
-    ogImage: "/images/hero/course-overview-waterfall-dinosaurs.jpg",
+    ogImage: "/images/hero/course-street-view-mammoth.jpg",
   },
 
   // ===================
@@ -281,8 +297,8 @@ export const siteConfig: {
   // Set show to true/false to display the banner
   // ===================
   seasonalBanner: {
-    show: true,
-    message: "Closed for the Season! Cya Summer 2026!",
+    show: false,
+    message: "Now open for the season! Come visit us in North Wildwood!",
   },
 };
 

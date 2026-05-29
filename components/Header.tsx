@@ -46,29 +46,30 @@ export default function Header() {
         aria-label="Main navigation"
       >
         <div className="flex items-center justify-between h-[72px]">
-          {/* Logo */}
+          {/* Logos - three businesses across the top */}
           <Link
             href="#home"
-            className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e86a33] rounded-lg"
+            className="flex items-center gap-2 sm:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e86a33] rounded-lg"
             aria-label={`${siteConfig.businessName} - Go to homepage`}
           >
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14">
-              <Image
-                src={siteConfig.images.logo}
-                alt={`${siteConfig.businessName} logo`}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            <div className="hidden sm:block bg-white/90 px-2 py-1 rounded-lg">
-              <span className="font-display text-lg font-bold text-[#0f3d1a] leading-tight block">
-                Jurassic
-              </span>
-              <span className="font-display text-sm font-semibold text-[#1a5f2a] leading-tight block">
-                Mini Golf
-              </span>
-            </div>
+            {[
+              { src: siteConfig.images.logos.golf, alt: `${siteConfig.businessName} logo` },
+              { src: siteConfig.images.logos.swirled, alt: `${siteConfig.secondaryName} logo` },
+              { src: siteConfig.images.logos.arcade, alt: `${siteConfig.tertiaryName} logo` },
+            ].map((logo) => (
+              <div
+                key={logo.src}
+                className="relative w-11 h-11 sm:w-14 sm:h-14"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            ))}
           </Link>
 
           {/* Desktop Navigation */}
@@ -84,14 +85,6 @@ export default function Header() {
               </li>
             ))}
           </ul>
-
-          {/* CTA Button - Desktop */}
-          <Link
-            href="#contact"
-            className="hidden md:inline-flex btn-primary text-sm px-5 py-2.5"
-          >
-            Plan Your Visit
-          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -128,16 +121,6 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
-              <Link
-                href="#contact"
-                onClick={handleNavClick}
-                className="btn-primary w-full"
-                tabIndex={isMenuOpen ? 0 : -1}
-              >
-                Plan Your Visit
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>

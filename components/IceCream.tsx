@@ -1,31 +1,7 @@
-"use client";
-
-import { useState, useCallback } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function IceCream() {
-  const [showMenuLightbox, setShowMenuLightbox] = useState(false);
-
-  const openLightbox = useCallback(() => {
-    setShowMenuLightbox(true);
-    document.body.style.overflow = "hidden";
-  }, []);
-
-  const closeLightbox = useCallback(() => {
-    setShowMenuLightbox(false);
-    document.body.style.overflow = "";
-  }, []);
-
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "Escape") {
-        closeLightbox();
-      }
-    },
-    [closeLightbox]
-  );
-
   const dessertTypes = [
     {
       name: "Hand Dipped Ice Cream",
@@ -65,7 +41,7 @@ export default function IceCream() {
       name: "Water Ice",
       tagline: "Cool & Refreshing",
       description:
-        "Beat the boardwalk heat with our refreshing water ice. Available in a rainbow of fruity flavors that hit the spot on a hot summer day!",
+        "Beat the heat with our refreshing water ice. Available in a rainbow of fruity flavors that hit the spot on a hot summer day!",
       image: siteConfig.images.iceCream.blueIceCream,
       icon: (
         <svg
@@ -143,143 +119,37 @@ export default function IceCream() {
           </div>
         </div>
 
-        {/* Two Column: Flavors/Toppings + Gallery */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Our Flavors - Menu Image */}
-          <div>
-            <h3 className="font-display text-2xl font-bold text-[#0f3d1a] mb-6 flex items-center gap-3">
-              <span
-                className="inline-flex items-center justify-center w-10 h-10 bg-[#e86a33] rounded-full"
-                aria-hidden="true"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2C9.24 2 7 4.24 7 7c0 1.53.69 2.91 1.78 3.83L8 22h8l-.78-11.17C16.31 9.91 17 8.53 17 7c0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z" />
-                </svg>
-              </span>
-              Our Flavors
-            </h3>
-
-            <button
-              onClick={openLightbox}
-              className="group relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e86a33] focus-visible:ring-offset-2"
-              aria-label="View full menu"
-            >
-              <Image
-                src={siteConfig.images.iceCream.menu}
-                alt="Jurassic Swirled Ice Cream Menu - Hand Dipped, Soft Serve, and Water Ice options"
-                fill
-                className="object-contain bg-white"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#0f3d1a]/0 group-hover:bg-[#0f3d1a]/40 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </button>
+        {/* Treat Gallery */}
+        <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={siteConfig.images.iceCream.bananaSplit}
+              alt="Delicious banana split sundae"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
           </div>
-
-          {/* Image Gallery */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src={siteConfig.images.iceCream.bananaSplit}
-                alt="Delicious banana split sundae"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src={siteConfig.images.iceCream.sundae}
-                alt="Ice cream sundae with toppings"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={siteConfig.images.iceCream.sundae}
+              alt="Ice cream sundae with toppings"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
+          </div>
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={siteConfig.images.iceCream.blueIceCream}
+              alt="Refreshing blue water ice"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
           </div>
         </div>
       </div>
-
-      {/* Menu Lightbox Modal */}
-      {showMenuLightbox && (
-        <div
-          className="lightbox-overlay"
-          onClick={closeLightbox}
-          onKeyDown={handleKeyDown}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Menu lightbox"
-          tabIndex={-1}
-        >
-          <div
-            className="lightbox-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute -top-12 right-0 text-white hover:text-[#f28b5c] transition-colors p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e86a33]"
-              aria-label="Close lightbox"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            {/* Image */}
-            <div className="relative w-[85vw] h-[75vh] max-w-5xl">
-              <Image
-                src={siteConfig.images.iceCream.menu}
-                alt="Jurassic Swirled Ice Cream Menu"
-                fill
-                className="object-contain"
-                sizes="85vw"
-                priority
-              />
-            </div>
-
-            {/* Caption */}
-            <p className="text-white text-center mt-4 text-lg">
-              Jurassic Swirled Menu
-            </p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

@@ -1,22 +1,22 @@
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function JsonLd() {
-  // Format hours for JSON-LD (schema.org format)
+  // Format hours for JSON-LD (schema.org format) - golf, open daily
   const openingHours = [
-    "Mo 12:00-22:00",
-    "Tu 12:00-22:00",
-    "We 12:00-22:00",
-    "Th 12:00-22:00",
-    "Fr 12:00-23:00",
+    "Mo 10:00-23:00",
+    "Tu 10:00-23:00",
+    "We 10:00-23:00",
+    "Th 10:00-23:00",
+    "Fr 10:00-23:00",
     "Sa 10:00-23:00",
-    "Su 10:00-22:00",
+    "Su 10:00-23:00",
   ];
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "EntertainmentBusiness",
     "@id": siteConfig.seo.canonical,
-    name: `${siteConfig.businessName} & ${siteConfig.secondaryName}`,
+    name: `${siteConfig.businessName}, ${siteConfig.secondaryName} & ${siteConfig.tertiaryName}`,
     description: siteConfig.seo.description,
     url: siteConfig.seo.canonical,
     telephone: siteConfig.phone,
@@ -38,27 +38,17 @@ export default function JsonLd() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        opens: "12:00",
-        closes: "22:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Friday",
-        opens: "12:00",
-        closes: "23:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
         opens: "10:00",
         closes: "23:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Sunday",
-        opens: "10:00",
-        closes: "22:00",
       },
     ],
     openingHours: openingHours,
@@ -89,6 +79,15 @@ export default function JsonLd() {
             name: "Ice Cream",
             description:
               "Soft serve ice cream, sundaes, and specialty treats at Jurassic Swirled",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Arcade",
+            description:
+              "Arcade games and classic arcade action for all ages at Jurassic Arcade",
           },
         },
       ],
